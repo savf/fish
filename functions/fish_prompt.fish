@@ -87,5 +87,9 @@ function fish_prompt --description 'Write out the prompt'
 		)
 	end
 
+	if set -q VIRTUAL_ENV
+		echo -n -s (set_color -b blue white) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
+	end
+
 	echo -n -s (set_color --bold "black") (date "+%H:%M:%S") (set_color magenta) ' ' "$__fish_prompt_hostname" $normal ' ' (set_color blue) (prompt_pwd) $normal (__fish_git_prompt) $normal $prompt_status "$mode_str " $suffix ' '
 end

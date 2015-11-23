@@ -1,5 +1,7 @@
 set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
+set -x PIP_REQUIRE_VIRTUALENV "true"
+eval (python -m virtualfish)
 
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
