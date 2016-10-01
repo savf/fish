@@ -23,10 +23,3 @@ set __fish_git_prompt_char_upstream_behind '-'
 
 # Autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and . /usr/local/share/autojump/autojump.fish
-
-# XCape
-if test -e (which xcape)
-	if test (ps -aux | grep [x]cape | wc -l) -lt 1
-		xcape -e 'Control_L=Tab;ISO_Level3_Shift=space'
-	end
-end
