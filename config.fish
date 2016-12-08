@@ -23,7 +23,7 @@ set __fish_git_prompt_char_upstream_behind '-'
 [ -f /usr/local/share/autojump/autojump.fish ]; and . /usr/local/share/autojump/autojump.fish
 
 # Anaconda
-set PATH ~/anaconda/bin $PATH
+set PATH ~/anaconda3/bin $PATH
 source (conda info --root)/bin/conda.fish
 
 # nVidia CUDA
