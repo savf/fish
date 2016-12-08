@@ -24,7 +24,7 @@ set __fish_git_prompt_char_upstream_behind '-'
 
 # Anaconda
 set PATH ~/anaconda3/bin $PATH
-source (conda info --root)/bin/conda.fish
+source ~/.config/fish/functions/conda.fish
 
 # nVidia CUDA
 set PATH /Developer/NVIDIA/CUDA-8.0/bin $PATH
