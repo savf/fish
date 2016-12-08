@@ -1,7 +1,5 @@
 set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
-set -x PIP_REQUIRE_VIRTUALENV "true"
-eval (python -m virtualfish)
 set PATH /usr/local/sbin $PATH
 
 # Fish git prompt
@@ -24,9 +22,13 @@ set __fish_git_prompt_char_upstream_behind '-'
 # Autojump
 [ -f /usr/local/share/autojump/autojump.fish ]; and . /usr/local/share/autojump/autojump.fish
 
-# XCape
-if test -e (which xcape)
-	if test (ps -aux | grep [x]cape | wc -l) -lt 1
-		xcape -e 'Control_L=Tab;ISO_Level3_Shift=space'
-	end
-end
+# Anaconda
+set PATH ~/anaconda/bin $PATH
+source (conda info --root)/bin/conda.fish
+
+# nVidia CUDA
+set PATH /Developer/NVIDIA/CUDA-8.0/bin $PATH
+set DYLD_LIBRARY_PATH /Developer/NVIDIA/CUDA-8.0/lib $DYLD_LIBRARY_PATH
+
+# Theano
+set CUDA_ROOT /Developer/NVIDIA/CUDA-8.0
