@@ -17,13 +17,13 @@ function fish_prompt --description 'Write out the prompt'
 				commandline -f repaint ^/dev/null
 			end
 		end
-		
+
 		function __fish_repaint_host --on-variable fish_color_host --description "Event handler, repaint when fish_color_host changes"
 			if status --is-interactive
 				commandline -f repaint ^/dev/null
 			end
 		end
-		
+
 		function __fish_repaint_status --on-variable fish_color_status --description "Event handler; repaint when fish_color_status changes"
 			if status --is-interactive
 				commandline -f repaint ^/dev/null
@@ -91,5 +91,5 @@ function fish_prompt --description 'Write out the prompt'
 		echo -n -s (set_color -b blue white) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
 	end
 
-	echo -n -s (set_color --bold "black") (date "+%H:%M:%S") (set_color magenta) ' ' "$__fish_prompt_hostname" $normal ' ' (set_color blue) (prompt_pwd) $normal (__fish_git_prompt) $normal $prompt_status "$mode_str " $suffix ' '
+	echo -n -s (set_color --bold "black") (date "+%H:%M:%S") (set_color --bold "magenta") ' ' "$USER" '@' "$__fish_prompt_hostname" $normal ' ' (set_color blue) (prompt_pwd) $normal (__fish_git_prompt) $normal $prompt_status "$mode_str " $suffix ' '
 end

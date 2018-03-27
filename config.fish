@@ -23,12 +23,12 @@ set __fish_git_prompt_char_upstream_behind '-'
 [ -f /usr/local/share/autojump/autojump.fish ]; and . /usr/local/share/autojump/autojump.fish
 
 # Anaconda
-set PATH ~/anaconda3/bin $PATH
+set PATH /usr/local/anaconda3/bin $PATH
 source ~/.config/fish/functions/conda.fish
 
 # nVidia CUDA
-set PATH /Developer/NVIDIA/CUDA-8.0/bin $PATH
-set DYLD_LIBRARY_PATH /Developer/NVIDIA/CUDA-8.0/lib $DYLD_LIBRARY_PATH
+set PATH /Developer/NVIDIA/CUDA-9.0/bin $PATH
+set DYLD_LIBRARY_PATH /Developer/NVIDIA/CUDA-9.0/lib $DYLD_LIBRARY_PATH
 
 # Theano
-set CUDA_ROOT /Developer/NVIDIA/CUDA-8.0
+set CUDA_ROOT /Developer/NVIDIA/CUDA-9.0
