@@ -32,3 +32,8 @@ set DYLD_LIBRARY_PATH /Developer/NVIDIA/CUDA-9.0/lib $DYLD_LIBRARY_PATH
 
 # Theano
 set CUDA_ROOT /Developer/NVIDIA/CUDA-9.0
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
+
+# Command Timer
+set fish_command_timer_time_format '%H:%M'
