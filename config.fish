@@ -23,17 +23,20 @@ set __fish_git_prompt_char_upstream_behind '-'
 [ -f /usr/local/share/autojump/autojump.fish ]; and . /usr/local/share/autojump/autojump.fish
 
 # Anaconda
-set PATH /usr/local/anaconda3/bin $PATH
+[ -d /usr/local/anaconda3/bin ]; and set PATH /usr/local/anaconda3/bin $PATH
 source ~/.config/fish/functions/conda.fish
 
 # nVidia CUDA
-set PATH /Developer/NVIDIA/CUDA-9.0/bin $PATH
-set DYLD_LIBRARY_PATH /Developer/NVIDIA/CUDA-9.0/lib $DYLD_LIBRARY_PATH
+[ -d /Developer/NVIDIA/CUDA-9.0/bin ]; and set PATH /Developer/NVIDIA/CUDA-9.0/bin $PATH
+[ -d /Developer/NVIDIA/CUDA-9.0/lib ]; and set DYLD_LIBRARY_PATH /Developer/NVIDIA/CUDA-9.0/lib $DYLD_LIBRARY_PATH
 
 # Theano
-set CUDA_ROOT /Developer/NVIDIA/CUDA-9.0
+[ -d /Developer/NVIDIA/CUDA-9.0 ]; set CUDA_ROOT /Developer/NVIDIA/CUDA-9.0
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
 
-# Command Timer
-set fish_command_timer_time_format '%H:%M'
+switch (uname)
+	case Darwin
+		# Command Timer
+		set fish_command_timer_time_format '%H:%M'
+end
