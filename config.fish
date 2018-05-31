@@ -39,4 +39,6 @@ switch (uname)
 	case Darwin
 		# Command Timer
 		set fish_command_timer_time_format '%H:%M'
+	case '*'
+		set fish_command_timer_enabled 0
 end
