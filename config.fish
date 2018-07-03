@@ -1,7 +1,7 @@
 set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
 set PATH /usr/local/sbin $PATH
-set PATH /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin $PATH
+[ -d /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin ]; and set PATH /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin $PATH
 
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
