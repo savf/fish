@@ -2,6 +2,7 @@ set -x LC_ALL en_US.UTF-8
 set -x LC_CTYPE en_US.UTF-8
 set PATH /usr/local/sbin $PATH
 [ -d /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin ]; and set PATH /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin $PATH
+set -gx TERM xterm-16color;
 
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
@@ -11,6 +12,7 @@ set __fish_git_prompt_showupstream 'yes'
 set __fish_git_prompt_color_branch yellow
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
+set fish_color_command brblack
 
 # Status Chars
 set __fish_git_prompt_char_dirtystate '⚡ '
